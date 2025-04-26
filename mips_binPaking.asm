@@ -12,7 +12,7 @@ method : .space 2
 # Bins structure
 bins: .space 400 # Array to store remaining capacity (100 bins)
 bin_counts: .space 400 # Array to store item counts per bin (100 bins)
-bins_items: .space 40000 # 2D array (100 bins × 25 items max)
+bins_items: .space 40000 # 2D array (100 bins Ã— 25 items max)
 bins_count: .word 0 # Number of bins used
 items_count: .word 0 # Number of valid items
 no_bins_msg: .asciiz "No bins were created!\n"
@@ -81,8 +81,8 @@ one_float: .float 1.0 # Constant 1.0
 
 
 binCount: .word 0 # Current number of bins used
-binItems: .space 400 # Space to track items in each bin (100 bins × 4 items × 4 bytes)
-binItemCounts: .space 400 # Space to track number of items in each bin (100 bins × 4 bytes)
+binItems: .space 400 # Space to track items in each bin (100 bins Ã— 4 items Ã— 4 bytes)
+binItemCounts: .space 400 # Space to track number of items in each bin (100 bins Ã— 4 bytes)
 
 msg_result: .asciiz "Total bins used: "
 
@@ -556,7 +556,7 @@ done_search:
 
     # Update binItems and binItemCounts
     la $s3, binItems        # Load binItems array
-    sll $t9, $t8, 4         # Each bin has space for 4 items (4 × 4 bytes)
+    sll $t9, $t8, 4         # Each bin has space for 4 items (4 Ã— 4 bytes)
     add $s4, $s3, $t9       # $s4 = address for this bin's items
 
     s.s $f12, 0($s4)        # Store first item in this bin
@@ -638,7 +638,7 @@ allPrintingItems2:
     # Clear All_item_inAllBins2 first
     la $t9, All_item_inAllBins2
     li $t8, 0
-    li $t7, 1600            # 100 bins × 4 items × 4 bytes
+    li $t7, 1600            # 100 bins Ã— 4 items Ã— 4 bytes
 clear_all_items:
     beqz $t7, end_clear
     sw $t8, 0($t9)
@@ -1010,7 +1010,7 @@ s.s $f6, 0($t5) # Update remaining capacity
 
 # Store item in 2D array
 lw $t6, 0($t3) # Get current item count
-mul $t7, $t1, 100 # Calculate row offset (25 items × 4 bytes)
+mul $t7, $t1, 100 # Calculate row offset (25 items Ã— 4 bytes)
 mul $t8, $t6, 4 # Column offset
 add $t7, $t7, $t8
 la $t8, bins_items
