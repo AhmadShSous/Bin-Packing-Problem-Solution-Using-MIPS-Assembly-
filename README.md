@@ -67,8 +67,6 @@ Bin 3: 0.500
 
 ## Author
 - Ahmad Shaher Sous
-- Project Supervisor: Dr. Radi Jarrar
-
 ---
 
 
