@@ -71,7 +71,4 @@ Bin 3: 0.500
 
 ---
 
-Ready to include this in your portfolio or CV to showcase advanced assembly-level programming skills!
-
----
 
