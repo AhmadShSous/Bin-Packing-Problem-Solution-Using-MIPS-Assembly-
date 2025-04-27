@@ -41,11 +41,6 @@ The program then writes the results into an output file, listing:
 
 ---
 
-## What to Mention in Your CV
-> **Assembly Programming Project: Bin Packing Solver (MIPS Assembly)**  
-> Developed a Bin Packing Problem solver in MIPS Assembly language, implementing First Fit (FF) and Best Fit (BF) heuristics. The program reads input data from a file, organizes items into bins with optimal space usage, and outputs results to a file. It includes manual memory management, file handling, floating-point parsing, custom heap and stack logic, and error handling for invalid inputs. Demonstrated strong low-level programming skills, understanding of data structures (arrays, buffers), and efficient algorithm implementation using MIPS instruction set.
-
----
 
 ## Example of Usage
 - User loads a file containing: `0.3 0.7 0.4 0.6 0.5`
@@ -80,4 +75,3 @@ Ready to include this in your portfolio or CV to showcase advanced assembly-leve
 
 ---
 
-*(If you want, I can also prepare a README layout file you can directly upload to GitHub if needed.)*
